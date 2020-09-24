@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Site Demo</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.products{
+			width: 100%;
+			height: auto;
+			/*background-color: gray;*/
+		}
+		.productwrapper{
+			height: auto;
+			width: 80%;
+			/*background-color: green;*/
+			margin-left: 10%;
+			margin-bottom: 50px;
+		}
+		.product{
+			width: 25%;
+			height: auto;
+			/*background-color: red;*/
+			display: inline-block;
+			margin-top: 25px;
+			margin-left: 6.25%;
+			border: 1px solid lightgray;
+		}
+		.prodimg{
+			height: 300px;
+			width: 100%;
+			/*background-color: yellow;*/
+			overflow: hidden;
+		}
+		.product h3,.product p{
+			padding: 5px;
+			padding-left: 10px;
+		}
+		.product p{
+			color: gray;
+		}
+		button{
+			padding: 10px;
+		}
+
+
+		.header1{
+			height: 70px;
+			width: 100%;
+			background-color: orange;
+			line-height: 70px;
+			display: inline-block;
+		}
+		.header1 h1{
+			margin-left: 2%;
+			display: inline-block;
+			width: 25%;
+			vertical-align: top;
+		}
+		.search1 {			
+			height: 70px;
+			width: 60%;
+			/*background-color: red;*/
+			display: inline-block;
+		}
+		.searchproduct{
+			height: 40px;
+			width: 30%;
+			text-indent: 20px;
+			border-radius: 5px;
+			border: 1px solid gray;
+			outline: none;
+
+		}
+		.searchminprice{
+			margin-left: 20%;
+			height: 40px;
+			width: 11%;
+			text-indent: 8px;
+			border-radius: 5px;
+			border: 1px solid gray;
+			outline: none;
+		}
+		.searchmaxprice{
+			height: 40px;
+			width: 11%;
+			text-indent: 8px;
+			border-radius: 5px;
+			border: 1px solid gray;
+			outline: none;
+		}
+		.mycart{
+			width: auto;
+			height: 70px;
+			display: inline-block;
+			float: right;
+		}
+		.mycart img{
+			padding-top: 20px;
+			width: 35px;
+			height: 30px;
+		}
+		.mycart .numbers{
+			float: right;
+			padding-left: 15px;
+			height: 40px;
+			text-align: center;
+		}
+		
+		
+		
+	</style>
+</head>
+<body>
+	<div class="header1">
+		<h1>Shopping Mart</h1>
+		<div class="search1">
+			<input class="searchproduct" type="search" onkeyup="searchProduct(this.value)" name="search me" placeholder="search  products">
+			<input class="searchminprice" onkeyup="pricefilter()" id="searchminprice" type="search" onkeyup="searchProduct(this.value)" name="search me" placeholder="Min Price" value="0">
+			<input class="searchmaxprice" id="searchmaxprice" onkeyup="pricefilter()" type="search" onkeyup="searchProduct(this.value)" name="search me" placeholder="Max Price" value="0">	
+			
+			
+			<div class="mycart">
+				<!-- <img src="productimages/cart.jpg"> -->
+				<img src="productimages/shopping-cart-svg-png-icon-download-28.png" width="200" alt="shopping cart svg png icon download" />
+				<div class="numbers" id="totalnumberofproductincart">0</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="products">
+		<div class="productwrapper" id="productwrapper">
+			
+		</div>
+		
+	</div>
+
+
+	<div class="products">
+		<h1>Cart : </h1>
+		<div class="productwrapper" id="cart"></div>
+
+	</div>
+
+
+<!-- Jquery CDN -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+<script type="text/javascript" src="shoping_2.js"></script>
+
+</body>
+</html>
